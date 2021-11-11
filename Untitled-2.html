@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第三次作业level0and1</title>
+</head>
+<script >
+ //第一种创建方式
+var obj = new Object();
+obj.name = 'xlf';
+obj.age = 18;
+console.log (obj);
+//第二种创建方式
+var obj = {
+    name1:'xlf',
+    age :18
+}
+console.log(obj);
+//第三种创建方式
+function Person(){
+    this.name = 'xlf';
+    this.age = 18;
+}
+let p = new Person();
+console.log (p);
+
+
+let a = {name:"zjj",age:18,gender:'male'};
+let b = {name:"xx",age:18,gender:'male'};
+let c = {name:"xlf",age:18,gender:'male'};
+
+function copy(insertObj){
+let newObj = {};
+    for(let i in insertObj)
+    {
+    newObj[i] = insertObj[i];
+    }
+    return newObj;
+}
+
+let obj1 = copy(a);
+let obj2 = copy(b);
+let obj3 = copy(c);
+
+
+let arr = [];
+
+arr.push(obj1,obj2,obj3);
+
+console.table(arr);
+</script>
+<body>
+    
+</body>
+</html>
